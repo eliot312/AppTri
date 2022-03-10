@@ -30,10 +30,7 @@ public class MainActivity extends AppCompatActivity {
         loadLocale();
 
         ClientBD bdd = new ClientBD(this);
-
         SQLiteDatabase bd = bdd.getWritableDatabase();
-
-
 
         setContentView(R.layout.activity_main);
         Button bouton = (Button) findViewById(R.id.buttonAllerListe);
@@ -43,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
         //affichage du toast
         Context context = getApplicationContext();
-        String text = "Bienvenue sur AppTri";
+        String text = getResources().getString(R.string.toastBienvenue);
         int duration = Toast.LENGTH_SHORT;
         Toast.makeText(context, text, duration).show();
 
@@ -84,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.menuLange:
                 changerdelangue();
+                break;
             default:
                 return super.onOptionsItemSelected(item);
         }
