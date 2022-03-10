@@ -10,6 +10,7 @@
     <string name="nom">Name</string>
     <string name="prenom">First name</string>
     <string name="sexeM">M</string>
+    <string name="toastBienvenue">Welcome to AppTri !</string>
     <string name="sexeF">F</string>
     <string name="ville">Town</string>
     <string name="codeP">Postal code</string>
@@ -22,4 +23,9 @@
     <string name="selection">Select a category!</string>
     <string name="retour">Back</string>
     <string name="textAPropos">AppTri is an application that lets you know how to sort everyday waste. We help and encourage people to sort and not make mistakes while sorting.</string>
+    <string name="carton">Cardboard</string>
+    <string name="alimentaire">Food Waste</string>
+    <string name="papier">Paper</string>
+    <string name="verre">Glass</string>
+    <string name="plastique">Plastic</string>
 </resources>
