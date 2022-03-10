@@ -11,6 +11,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -27,6 +28,13 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
+
+        ClientBD bdd = new ClientBD(this);
+
+        SQLiteDatabase bd = bdd.getWritableDatabase();
+
+
+
         setContentView(R.layout.activity_main);
         Button bouton = (Button) findViewById(R.id.buttonAllerListe);
 
