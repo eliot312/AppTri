@@ -24,13 +24,16 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
+    private SQLiteDatabase bd;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         loadLocale();
 
         ClientBD bdd = new ClientBD(this);
-        SQLiteDatabase bd = bdd.getWritableDatabase();
+        this.bd = bdd.getWritableDatabase();
+
 
         setContentView(R.layout.activity_main);
         Button bouton = (Button) findViewById(R.id.buttonAllerListe);
@@ -129,6 +132,10 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("Paramètres", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
+    }
+
+    public void onExit(){
+        bd.close();
     }
 
 }
