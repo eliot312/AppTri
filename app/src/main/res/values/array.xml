@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="valeurs">
+        <item>Déchets Alimentaire</item>
+        <item>Carton</item>
+        <item>Papier</item>
+        <item>Plastique</item>
+        <item>Verre</item>
+    </string-array>
+</resources>

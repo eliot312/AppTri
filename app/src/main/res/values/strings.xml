@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">AppTri</string>
+    <string name="propos">A propos</string>
+    <string name="changerLangue">Changer de langue</string>
+    <string name="Inscription">S\'inscrire</string>
+    <string name="textAccueil">Tout savoir sur le tri !</string>
+    <string name="annuler">Annuler</string>
+    <string name="valider">Valider</string>
+    <string name="nom">Nom</string>
+    <string name="prenom">Prénom</string>
+    <string name="sexeM">M</string>
+    <string name="sexeF">F</string>
+    <string name="ville">Ville</string>
+    <string name="codeP">Code Postal</string>
+    <string name="email">Email</string>
+    <string name="mdp">Mot de passe</string>
+    <string name="confirmMDP">Confirmer le mot de passe</string>
+    <string name="retourListe">Retour à la liste !</string>
+    <string name="titreAPropos">A Propos de AppTri</string>
+    <string name="retourAccueil">Retour à l\'accueil !</string>
+    <string name="selection">Sélectionner une catégorie !</string>
+    <string name="retour">Retour</string>
+    <string name="textAPropos">AppTri est une application qui permet de savoir comment trier les déchets de tous les jours. Nous aidons et encourageons les gens à faire du tri et à ne pas se tromper en triant. </string>
+</resources>

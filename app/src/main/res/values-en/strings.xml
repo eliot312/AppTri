@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">AppTri</string>
+    <string name="propos">About us</string>
+    <string name="changerLangue">Change language</string>
+    <string name="Inscription">Register</string>
+    <string name="textAccueil">All about sorting!</string>
+    <string name="annuler">Cancel</string>
+    <string name="valider">Validate</string>
+    <string name="nom">Name</string>
+    <string name="prenom">First name</string>
+    <string name="sexeM">M</string>
+    <string name="sexeF">F</string>
+    <string name="ville">Town</string>
+    <string name="codeP">Postal code</string>
+    <string name="email">Email</string>
+    <string name="mdp">Password</string>
+    <string name="confirmMDP">Confirm password</string>
+    <string name="retourListe">Back to the list !</string>
+    <string name="titreAPropos">About AppTri</string>
+    <string name="retourAccueil">Back to Home !</string>
+    <string name="selection">Select a category!</string>
+    <string name="retour">Back</string>
+    <string name="textAPropos">AppTri is an application that lets you know how to sort everyday waste. We help and encourage people to sort and not make mistakes while sorting.</string>
+</resources>

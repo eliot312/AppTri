@@ -1,0 +1,86 @@
+package com.example.apptri;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.Button;
+import android.widget.ListView;
+
+public class ListItemActivity extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_list_item);
+        ListView ListeV = (ListView) findViewById(R.id.listeDesElements);
+        String[] valeurs = getResources().getStringArray(R.array.valeurs);
+
+        MonAdaptateurDeListe adapter = new MonAdaptateurDeListe(this, valeurs);
+
+        ListeV.setAdapter(adapter);
+
+        Button bouton = (Button) findViewById(R.id.buttonRetourAccueil);
+
+        bouton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(ListItemActivity.this, MainActivity.class);
+                intent.putExtra("Info", "un texte");
+                startActivity(intent);
+            }
+        });
+
+
+        ListeV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String s = (String)(adapterView.getItemAtPosition(i));
+                Intent intent = new Intent(ListItemActivity.this, InfoItemCliqueActivity.class);
+                intent.putExtra("information", s);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+    }
+
+
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflaterMenu = getMenuInflater();
+        inflaterMenu.inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+
+        switch (item.getItemId()) {
+            case R.id.item1menu:
+                Intent intent = new Intent(ListItemActivity.this, AProposActivity.class);
+                intent.putExtra("Info", "un texte");
+                startActivity(intent);
+                break;
+            case R.id.item2menu:
+                System.exit(0);
+                break;
+            case R.id.item3menu:
+                Intent intent1 = new Intent(ListItemActivity.this, InscriptionActivity.class);
+                intent1.putExtra("Info", "un texte");
+                startActivity(intent1);
+                break;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+        return super.onOptionsItemSelected(item);
+    }
+}
