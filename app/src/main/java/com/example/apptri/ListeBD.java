@@ -6,16 +6,15 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
-public class ClientBD extends SQLiteOpenHelper {
+public class ListeBD extends SQLiteOpenHelper {
 
     public static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "client.db";
+    public static final String DATABASE_NAME = "liste.db";
 
-    public final String SQL_CREATE = "CREATE TABLE Utilisateurs (id INTEGER PRIMARY KEY, nom Text, prenom TEXT, sexe TEXT, ville TEXT, codePostal TEXT, Email TEXT, MDP TEXT, cMDP TEXT);";
-    //public final String SQL_INSERT = "INSERT INTO Utilisateurs VALUES(1,'Piazzi','Nathan','M','Toulouse','31000','NP@android.com','mdp','mdp');";
-    public final String SQL_DELETE = "DROP TABLE IF EXISTS Utilisateurs;";
+    public final String SQL_CREATE = "CREATE TABLE Liste (id INTEGER PRIMARY KEY, libelle Text, text TEXT);";
+    public final String SQL_DELETE = "DROP TABLE IF EXISTS Liste;";
 
-    public ClientBD(Context context) {
+    public ListeBD(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
     }
 
