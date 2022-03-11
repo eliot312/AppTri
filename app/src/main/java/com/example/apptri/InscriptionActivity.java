@@ -12,6 +12,7 @@ import android.content.SharedPreferences;
 import android.content.res.Configuration;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -163,9 +164,16 @@ public class InscriptionActivity extends AppCompatActivity {
                         values.put("mdp", str_mdp);
                         values.put("cmdp", str_cmdp);
                         bd.insert("Utilisateurs", null, values);
-                        Intent intent = new Intent(InscriptionActivity.this, MainActivity.class);
-                        intent.putExtra("Info", "un texte");
-                        startActivity(intent);
+
+                        Toast.makeText(getApplicationContext(), "Utilisateur ajouté", Toast.LENGTH_SHORT).show();
+                        new Handler().postDelayed(new Runnable() {
+                            @Override
+                            public void run() {
+                                Intent intent = new Intent(InscriptionActivity.this, MainActivity.class);
+                                intent.putExtra("Info", "un texte");
+                                startActivity(intent);
+                            }
+                        }, 3000);
                     }
                 }
             }
