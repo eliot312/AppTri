@@ -127,4 +127,5 @@ public class InscriptionActivity extends AppCompatActivity {
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
     }
+
 }

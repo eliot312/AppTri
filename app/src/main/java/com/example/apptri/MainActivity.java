@@ -6,6 +6,7 @@ import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.Activity;
+import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -18,6 +19,9 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.Toast;
 
 import java.util.Locale;
@@ -56,6 +60,115 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //Récupere les données du formulaire
+        Button enregistrer = (Button) findViewById(R.id.button7);
+        EditText nom = (EditText) findViewById(R.id.editTextTextPersonName5);
+        EditText prenom = (EditText) findViewById(R.id.editTextTextPersonName6);
+        RadioGroup sexe = (RadioGroup) findViewById(R.id.radioSexe);
+        EditText ville = (EditText) findViewById(R.id.editTextTextPersonName8);
+        EditText codePostal = (EditText) findViewById(R.id.editTextTextPostalAddress);
+        EditText email= (EditText) findViewById(R.id.editTextTextPersonName11);
+        EditText mdp = (EditText) findViewById(R.id.editTextTextPassword);
+        EditText cmdp = (EditText) findViewById(R.id.editTextTextPassword2);
+
+        //clic sur "enregistrer"
+        enregistrer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String str_nom="";
+                String str_prenom="";
+                String str_sexe="";
+                String str_ville="";
+                String str_codePostal="";
+                String str_email="";
+                String str_mdp="";
+                String str_cmdp="";
+
+                //Validation
+                boolean info_valable=true;
+                //Mot de passe compatible
+                boolean info_mdp = true;
+
+                if(nom.getText().toString().trim().equals("")==false){
+                    str_nom=nom.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(prenom.getText().toString().trim().equals("")==false){
+                    str_prenom=prenom.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                // obtenir le bouton radio sélectionné de radioGroup
+                int selectedId = sexe.getCheckedRadioButtonId();
+
+                if (selectedId != -1){
+                    RadioButton radioSexButton;
+                    radioSexButton = (RadioButton) findViewById(selectedId);
+                    str_sexe=radioSexButton.getText().toString();
+                }else{
+                    info_valable=false;
+                }
+
+                if(ville.getText().toString().trim().equals("")==false){
+                    str_ville=ville.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(codePostal.getText().toString().trim().equals("")==false){
+                    str_codePostal=codePostal.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(email.getText().toString().trim().equals("")==false){
+                    str_email=email.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(mdp.getText().toString().trim().equals("")==false){
+                    str_mdp=mdp.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(cmdp.getText().toString().trim().equals("")==false){
+                    str_cmdp=cmdp.getText().toString().trim();
+                }else{
+                    info_valable=false;
+                }
+
+                if(mdp.getText().toString().equals(cmdp)==false){
+                    info_mdp=false;
+                }
+
+                if (info_valable==false){
+                    Toast.makeText(getApplicationContext(),"Il manque des informations",Toast.LENGTH_SHORT).show();
+                }else{
+                    ContentValues values = new ContentValues();
+                    values.put("nom",str_nom);
+                    values.put("prenom",str_prenom);
+                    values.put("sexe",str_sexe);
+                    values.put("ville",str_ville);
+                    values.put("codePostal",str_codePostal);
+                    values.put("email",str_email);
+                    values.put("mdp",str_mdp);
+                    values.put("cmdp",str_cmdp);
+                    bd.insert("Utilisateurs",null,values);
+                }
+
+                if (info_mdp==false){
+                    Toast.makeText(getApplicationContext(),"Les mots de passe sont différents",Toast.LENGTH_SHORT).show();
+                }
+
+            }
+        });
+
     }
 
     @Override
@@ -132,10 +245,6 @@ public class MainActivity extends AppCompatActivity {
         SharedPreferences prefs = getSharedPreferences("Paramètres", Activity.MODE_PRIVATE);
         String language = prefs.getString("My_Lang", "");
         setLocale(language);
-    }
-
-    public void onExit(){
-        bd.close();
     }
 
 }
