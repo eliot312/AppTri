@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#63CA67"
     tools:context=".InscriptionActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="520dp"
         android:text="@string/Inscription"
+        android:textColor="#FFFFFF"
         android:textSize="20sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -36,7 +38,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/nom"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextTextPersonName6"
@@ -44,7 +48,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/prenom"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <RadioGroup
             android:id="@+id/radioSexe"
@@ -55,13 +61,17 @@
                 android:id="@+id/radioButton4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sexeM" />
+                android:text="@string/sexeM"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
 
             <RadioButton
                 android:id="@+id/radioButton3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="@string/sexeF" />
+                android:text="@string/sexeF"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#FFFFFF" />
         </RadioGroup>
 
         <EditText
@@ -70,15 +80,19 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/ville"
-            android:inputType="textPersonName" />
+            android:inputType="textPersonName"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextTextPostalAddress"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
+            android:hint="@string/codeP"
             android:inputType="textPostalAddress"
-            android:hint="@string/codeP"/>
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextTextPersonName11"
@@ -86,7 +100,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/email"
-            android:inputType="textEmailAddress" />
+            android:inputType="textEmailAddress"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextTextPassword"
@@ -94,7 +110,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/mdp"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
 
         <EditText
             android:id="@+id/editTextTextPassword2"
@@ -102,7 +120,9 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/confirmMDP"
-            android:inputType="textPassword" />
+            android:inputType="textPassword"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#FFFFFF" />
     </LinearLayout>
 
     <Button
