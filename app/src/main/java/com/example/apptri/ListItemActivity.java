@@ -23,7 +23,7 @@ import java.util.Locale;
 
 public class ListItemActivity extends AppCompatActivity {
 
-    private String[] tri = {"dechets","carton","papier","plastique","verre"};
+    private String[] tri = {"Déchets alimentaires","Carton","Papier","Plastique","Verre"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

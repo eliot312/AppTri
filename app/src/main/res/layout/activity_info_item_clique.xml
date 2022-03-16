@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#63CA67"
     tools:context=".InfoItemCliqueActivity">
 
     <TextView
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:text="TextView"
+        android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
@@ -36,6 +38,7 @@
         android:layout_height="466dp"
         android:layout_marginTop="70dp"
         android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce ligula nibh, porttitor at nulla non, vulputate mattis diam. Proin justo dui, pretium vitae dui vel, vestibulum venenatis nunc. Curabitur sollicitudin mi nisi. Cras sit amet libero libero. Ut non porttitor ante. Sed imperdiet varius nunc at faucibus. Fusce tempor suscipit pharetra. Duis pretium leo eget accumsan suscipit. Nulla at dui at diam convallis consectetur nec at libero. Aenean sit amet mattis elit.  Nulla cursus, nisi et ullamcorper efficitur, ipsum ex lobortis odio, cursus aliquam mauris ipsum nec risus. In orci massa, scelerisque et ante eu, ultrices consectetur neque. Cras eget vestibulum ante. Quisque ullamcorper pretium urna, id porttitor est tristique vel. Fusce iaculis fringilla ex. Ut id laoreet metus. Nam a augue est. Curabitur non pharetra libero, id elementum neque. Proin felis felis, finibus a dui ut, placerat volutpat tortor. Ut feugiat tincidunt ornare. Duis non neque lorem. Mauris rutrum venenatis sollicitudin. Aliquam volutpat pretium urna, id venenatis orci. Aliquam aliquet purus quis semper euismod."
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/BoutonRetourListe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
