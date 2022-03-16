@@ -23,6 +23,7 @@ public class ListeBD extends SQLiteOpenHelper {
             "- les films plastiques et les blisters ;\n" +
             "- les aérosols de produits toxiques ;\n" +
             "- les emballages très sales. ');";
+
     public final String SQL_INSERT4 = "INSERT INTO Liste VALUES(5,'Verre','Recycler le verre est l’un des gestes écologiques les plus simples et efficaces que l’on puisse faire. En effet, le verre met 3 ou 4 millénaires à se décomposer dans la nature (mais on ne sait pas vraiment, en vérité), et créer du verre « neuf » à partir de verre recyclé consomme beaucoup moins d’énergie : une tonne de verre recyclé permet d’économiser une demie-tonne de CO2.');";
     public final String SQL_DELETE = "DROP TABLE IF EXISTS Liste;";
 
