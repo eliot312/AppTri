@@ -56,6 +56,7 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
                 nom.setText(libelle1);
                 info.setText(text1);
             }
+            
 
         bouton.setOnClickListener(new View.OnClickListener() {
 
