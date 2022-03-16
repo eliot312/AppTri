@@ -31,6 +31,7 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
 
         Button bouton = (Button) findViewById(R.id.BoutonRetourListe);
 
+
         bouton.setOnClickListener(new View.OnClickListener() {
 
             @Override

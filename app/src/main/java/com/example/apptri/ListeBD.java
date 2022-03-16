@@ -12,6 +12,7 @@ public class ListeBD extends SQLiteOpenHelper {
     public static final String DATABASE_NAME = "liste.db";
 
     public final String SQL_CREATE = "CREATE TABLE Liste (id INTEGER PRIMARY KEY, libelle Text, text TEXT);";
+    public final String SQL_INSERT = "INSERT INTO Liste VALUES(1,'dechets','Les dechets c est pas ouf');";
     public final String SQL_DELETE = "DROP TABLE IF EXISTS Liste;";
 
     public ListeBD(Context context) {
@@ -21,6 +22,7 @@ public class ListeBD extends SQLiteOpenHelper {
     @Override
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE);
+        db.execSQL(SQL_INSERT);
 
     }
 
