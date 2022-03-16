@@ -55,6 +55,7 @@ public class ListItemActivity extends AppCompatActivity {
                 intent.putExtra("information", s);
                 startActivity(intent);
                 finish();
+
             }
         });
 
