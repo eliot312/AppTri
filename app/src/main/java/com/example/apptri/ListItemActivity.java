@@ -51,8 +51,6 @@ public class ListItemActivity extends AppCompatActivity {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
                 String s = (String)(adapterView.getItemAtPosition(i));
-                int id = 
-                switch
                 Intent intent = new Intent(ListItemActivity.this, InfoItemCliqueActivity.class);
                 intent.putExtra("information", s);
                 startActivity(intent);
