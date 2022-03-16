@@ -22,6 +22,7 @@
         android:id="@+id/imageViewAccueil"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
         app:layout_constraintBottom_toTopOf="@+id/buttonAllerListe"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
