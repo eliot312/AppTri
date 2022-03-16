@@ -11,8 +11,19 @@ public class ListeBD extends SQLiteOpenHelper {
     public static final int DATABASE_VERSION = 1;
     public static final String DATABASE_NAME = "liste.db";
 
-    public final String SQL_CREATE = "CREATE TABLE Liste (id INTEGER PRIMARY KEY, libelle Text, text TEXT);";
-    public final String SQL_INSERT = "INSERT INTO Liste VALUES(1,'dechets','Les dechets c est pas ouf');";
+    public final String SQL_CREATE = "CREATE TABLE Liste (id INTEGER PRIMARY KEY, libelle String, text String);";
+    public final String SQL_INSERT = "INSERT INTO Liste VALUES(1,'dechets','Compost – Retour à la terre : la matière organique est transformée en terreau riche qui sera utilisé pour amender les sols. Pour cela, Il est primordial que les déchets organiques soient bien triés et ne contiennent aucun débris de plastique ou métal ou autre (épluchures de fruits et légumes, filtre et marc de café..)');";
+    public final String SQL_INSERT1 = "INSERT INTO Liste VALUES(2,'carton','Comme le papier, le carton est composé de fibres de bois biodégradables, appelées celluloses. Ces fibres sont 100% recyclables et non toxiques. Il est donc tout à fait possible de les valoriser énergétiquement en les recyclant ou en les brûlant, ou de les composter.');";
+    public final String SQL_INSERT2 = "INSERT INTO Liste VALUES(3,'papier','Tout comme le recyclage du carton, celui du papier est très simple. En effet, le papier est fait de fibres végétales, généralement obtenues à partir du bois. Appelées cellulose, ces fibres sont biodégradables, recyclables et non nocives pour la santé et l’environnement.');";
+    public final String SQL_INSERT3 = "INSERT INTO Liste VALUES(4,'plastique','Toutes les matières plastiques ne sont pas recyclables. Certaines sont en effet fabriquées à partir de pétrole ou bien contiennent trop peu de matière pour être recyclable. Par conséquent, il ne faut pas jeter dans les poubelles jaunes :\n" +
+            "\n" +
+            "- les sachets plastique ;\n" +
+            "- les barquettes en plastique souple et en polystyrène ;\n" +
+            "- les pots de yaourt ;\n" +
+            "- les films plastiques et les blisters ;\n" +
+            "- les aérosols de produits toxiques ;\n" +
+            "- les emballages très sales. ');";
+    public final String SQL_INSERT4 = "INSERT INTO Liste VALUES(5,'verre','Recycler le verre est l’un des gestes écologiques les plus simples et efficaces que l’on puisse faire. En effet, le verre met 3 ou 4 millénaires à se décomposer dans la nature (mais on ne sait pas vraiment, en vérité), et créer du verre « neuf » à partir de verre recyclé consomme beaucoup moins d’énergie : une tonne de verre recyclé permet d’économiser une demie-tonne de CO2.');";
     public final String SQL_DELETE = "DROP TABLE IF EXISTS Liste;";
 
     public ListeBD(Context context) {
@@ -23,7 +34,10 @@ public class ListeBD extends SQLiteOpenHelper {
     public void onCreate(SQLiteDatabase db) {
         db.execSQL(SQL_CREATE);
         db.execSQL(SQL_INSERT);
-
+        db.execSQL(SQL_INSERT1);
+        db.execSQL(SQL_INSERT2);
+        db.execSQL(SQL_INSERT3);
+        db.execSQL(SQL_INSERT4);
     }
 
     @Override

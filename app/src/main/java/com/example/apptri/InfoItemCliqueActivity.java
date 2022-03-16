@@ -9,18 +9,26 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Configuration;
+import android.database.Cursor;
+import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import org.w3c.dom.Text;
 
 import java.util.Locale;
 
 public class InfoItemCliqueActivity extends AppCompatActivity {
 
+    private ListeBD bdd;
+    private SQLiteDatabase bd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,7 +38,24 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
         label.setText(getIntent().getStringExtra("information"));
 
         Button bouton = (Button) findViewById(R.id.BoutonRetourListe);
+        String tri = getIntent().getStringExtra("tri");
+        TextView nom = findViewById(R.id.textViewParam);
+        TextView info = findViewById(R.id.textView);
 
+        bdd = new ListeBD(this);
+        bd = bdd.getWritableDatabase();
+        String[] select = {"id","libelle","text"};
+        String[] where = {tri};
+
+        Cursor curs= bd.query("Liste",select,"libelle=?",where,null,null,null);
+            if (curs.moveToFirst()){
+                Integer id1 = curs.getInt(curs.getColumnIndexOrThrow("id"));
+                String libelle1 = curs.getString(curs.getColumnIndexOrThrow("libelle"));
+                String text1 = curs.getString(curs.getColumnIndexOrThrow("text"));
+
+                nom.setText(libelle1);
+                info.setText(text1);
+            }
 
         bouton.setOnClickListener(new View.OnClickListener() {
 

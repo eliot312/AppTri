@@ -23,6 +23,7 @@ import java.util.Locale;
 
 public class ListItemActivity extends AppCompatActivity {
 
+    private String[] tri = {"dechets","carton","papier","plastique","verre"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -35,6 +36,17 @@ public class ListItemActivity extends AppCompatActivity {
         ListeV.setAdapter(adapter);
 
         Button bouton = (Button) findViewById(R.id.buttonRetourAccueil);
+        ListView lv = (ListView) findViewById(R.id.listeDesElements);
+
+        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                String s = (String) adapterView.getItemAtPosition(i);
+                Intent intent = new Intent(ListItemActivity.this, InfoItemCliqueActivity.class);
+                intent.putExtra("tri",tri[i]);
+                startActivity(intent);
+            }
+        });
 
         bouton.setOnClickListener(new View.OnClickListener() {
 
@@ -43,19 +55,6 @@ public class ListItemActivity extends AppCompatActivity {
                 Intent intent = new Intent(ListItemActivity.this, MainActivity.class);
                 intent.putExtra("Info", "un texte");
                 startActivity(intent);
-            }
-        });
-
-
-        ListeV.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
-                String s = (String)(adapterView.getItemAtPosition(i));
-                Intent intent = new Intent(ListItemActivity.this, InfoItemCliqueActivity.class);
-                intent.putExtra("information", s);
-                startActivity(intent);
-                finish();
-
             }
         });
 
