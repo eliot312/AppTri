@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(MainActivity.this, ListItemActivity.class);
-                intent.putExtra("Info", "un texte");
+                intent.putExtra("Info", "paramètre à faire passer");
                 startActivity(intent);
             }
         });

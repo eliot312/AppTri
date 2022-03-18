@@ -34,9 +34,6 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info_item_clique);
 
-        TextView label = (TextView)findViewById(R.id.textViewParam);
-        label.setText(getIntent().getStringExtra("information"));
-
         Button bouton = (Button) findViewById(R.id.BoutonRetourListe);
         String tri = getIntent().getStringExtra("tri");
         TextView nom = findViewById(R.id.textViewParam);
