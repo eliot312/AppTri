@@ -4,14 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#63CA67">
+    android:background="#4D854F">
 
     <TextView
         android:id="@+id/textViewTitreListe"
-        android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_width="201dp"
+        android:layout_height="20dp"
         android:layout_marginBottom="500dp"
-        android:background="#60605C"
         android:text="@string/selection"
         android:textColor="#FFFFFF"
         android:textSize="16sp"

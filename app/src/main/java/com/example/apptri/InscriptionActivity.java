@@ -145,7 +145,6 @@ public class InscriptionActivity extends AppCompatActivity {
 
                 if (str_mdp.equals(str_cmdp) == false) {
                     info_mdp = false;
-                    Toast.makeText(getApplicationContext(), "non", Toast.LENGTH_SHORT).show();
                 }
 
                 if (info_mdp == false) {
