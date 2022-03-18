@@ -23,7 +23,7 @@
     <string name="retour">Retour</string>
     <string name="textAPropos">AppTri est une application qui permet de savoir comment trier les déchets de tous les jours. Nous aidons et encourageons les gens à faire du tri et à ne pas se tromper en triant. </string>
     <string name="carton">Carton</string>
-    <string name="alimentaire">Déchets Alimentaires</string>
+    <string name="alimentaire">Déchets alimentaires</string>
     <string name="papier">Papier</string>
     <string name="verre">Verre</string>
     <string name="plastique">Plastique</string>
