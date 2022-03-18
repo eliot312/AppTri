@@ -27,7 +27,7 @@ import java.util.Locale;
 
 public class InfoItemCliqueActivity extends AppCompatActivity {
 
-    private ListeBD bdd;
+    private ClientBD bdd;
     private SQLiteDatabase bd;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,16 +42,18 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
         TextView nom = findViewById(R.id.textViewParam);
         TextView info = findViewById(R.id.textView);
 
-        bdd = new ListeBD(this);
+        bdd = new ClientBD(this);
         bd = bdd.getWritableDatabase();
-        String[] select = {"id","libelle","text"};
+        bd.close();
+        bd=bdd.getWritableDatabase();
+        String[] select = {"id","libelle","text2"};
         String[] where = {tri};
 
         Cursor curs= bd.query("Liste",select,"libelle=?",where,null,null,null);
             if (curs.moveToFirst()){
                 Integer id1 = curs.getInt(curs.getColumnIndexOrThrow("id"));
                 String libelle1 = curs.getString(curs.getColumnIndexOrThrow("libelle"));
-                String text1 = curs.getString(curs.getColumnIndexOrThrow("text"));
+                String text1 = curs.getString(curs.getColumnIndexOrThrow("text2"));
 
                 nom.setText(libelle1);
                 info.setText(text1);
