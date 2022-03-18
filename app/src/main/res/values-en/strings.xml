@@ -28,4 +28,6 @@
     <string name="papier">Paper</string>
     <string name="verre">Glass</string>
     <string name="plastique">Plastic</string>
+    <string name="infosManquante">Information is missing</string>
+    <string name="MDPdiff">Passwords are different</string>
 </resources>

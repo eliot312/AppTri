@@ -27,4 +27,6 @@
     <string name="papier">Papier</string>
     <string name="verre">Verre</string>
     <string name="plastique">Plastique</string>
+    <string name="infosManquante">Il manque des informations</string>
+    <string name="MDPdiff">Les mots de passe sont différents</string>
 </resources>

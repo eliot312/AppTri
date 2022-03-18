@@ -148,10 +148,12 @@ public class InscriptionActivity extends AppCompatActivity {
                 }
 
                 if (info_mdp == false) {
-                    Toast.makeText(getApplicationContext(), "Les mots de passe sont différents", Toast.LENGTH_SHORT).show();
+                    String text1 = getResources().getString(R.string.MDPdiff);
+                    Toast.makeText(getApplicationContext(), text1, Toast.LENGTH_SHORT).show();
                 } else {
                     if (info_valable == false) {
-                        Toast.makeText(getApplicationContext(), "Il manque des informations", Toast.LENGTH_SHORT).show();
+                        String text2 = getResources().getString(R.string.infosManquante);
+                        Toast.makeText(getApplicationContext(), text2, Toast.LENGTH_SHORT).show();
                     } else {
                         ContentValues values = new ContentValues();
                         values.put("nom", str_nom);
