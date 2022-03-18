@@ -80,7 +80,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.item2menu:
-                finish();
+                System.exit(0);
                 break;
             case R.id.item3menu:
                 Intent intent1 = new Intent(MainActivity.this, InscriptionActivity.class);

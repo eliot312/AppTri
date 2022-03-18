@@ -86,7 +86,6 @@ public class InfoItemCliqueActivity extends AppCompatActivity {
                 break;
             case R.id.item2menu:
                 System.exit(0);
-                finish();
                 break;
             case R.id.item3menu:
                 Intent intent1 = new Intent(InfoItemCliqueActivity.this, InscriptionActivity.class);
