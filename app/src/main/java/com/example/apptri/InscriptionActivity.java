@@ -166,7 +166,8 @@ public class InscriptionActivity extends AppCompatActivity {
                         values.put("cmdp", str_cmdp);
                         bd.insert("Utilisateurs", null, values);
 
-                        Toast.makeText(getApplicationContext(), "Utilisateur ajouté", Toast.LENGTH_SHORT).show();
+                        String text3 = getResources().getString(R.string.AjoutUtilisateur);
+                        Toast.makeText(getApplicationContext(), text3, Toast.LENGTH_SHORT).show();
                         new Handler().postDelayed(new Runnable() {
                             @Override
                             public void run() {

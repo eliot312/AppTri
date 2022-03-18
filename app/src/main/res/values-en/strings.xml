@@ -30,4 +30,5 @@
     <string name="plastique">Plastic</string>
     <string name="infosManquante">Information is missing</string>
     <string name="MDPdiff">Passwords are different</string>
+    <string name="AjoutUtilisateur">User added</string>
 </resources>
